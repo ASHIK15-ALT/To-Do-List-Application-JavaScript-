@@ -1,0 +1,177 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Todo Container */
+.todo-container {
+    background-color: #fff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.todo-container:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading Style */
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #444;
+    font-weight: 600;
+}
+
+/* Input Container */
+.input-container {
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+#todo-input:focus {
+    border: 1px solid #28a745;
+}
+
+/* Add Button */
+#add-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: background-color 0.3s ease;
+}
+
+#add-btn:hover {
+    background-color: #218838;
+}
+
+/* Unordered List for Todo Items */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+li:hover {
+    transform: translateX(5px);
+}
+
+/* Todo Item Delete Button */
+li button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+li button:hover {
+    background-color: #c82333;
+}
+
+/* Focus & Accessibility Enhancements */
+button:focus,
+#todo-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design - Mobile First */
+@media (max-width: 768px) {
+    .todo-container {
+        width: 280px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #todo-input {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    #add-btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    li {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .todo-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    #todo-input {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    #add-btn {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    li {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
